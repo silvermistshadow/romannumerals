@@ -1,0 +1,30 @@
+body {
+  background-image: url(../img/background.jpg);
+  text-shadow: #000 1px 0 10px;
+  color: #EEE;
+  background-color: #999;
+}
+
+#formOne {
+  max-width: 500px;
+  border-width: 10px;
+  margin: 8px;
+  padding: 8px;
+}
+
+.btn {
+  color: #000;
+}
+
+#output {
+  display: none;
+  text-shadow: none;
+  color: #FFF;
+  font-size: 36px;
+  max-width: 400px;
+  border-width: 12px;
+  border-color: #333;
+  border-style: double;
+  background-color: #999;
+  padding: 12px;
+}
