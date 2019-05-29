@@ -1,15 +1,16 @@
 //Back end logic here
 const romanNums = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
-const wholeRomanNums = ['1', '5', '10', '50', '100', '500', '1000']
+const wholeRomanNums = [1, 5, 10, 50, 100, 500, 1000]
 var toRomanNum = function(inputNum){
   for (var x=0; x < wholeRomanNums.length; x++){
     if (inputNum === wholeRomanNums[x]) {
-      convRomanNum = romanNums[x];
+      convRomanNum = romanNums[x]; //Supposed to make it pick the same position in the other array
       x = wholeRomanNums.length;
       console.log(convRomanNum)
     }
 
   };
+  return convRomanNum;
 };
 
 
