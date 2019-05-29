@@ -8,6 +8,11 @@
 
 _{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
 
+Specs:
+0: Recognize whether it's a number
+1: value between 0 and 3,999
+2: translates whole roman numbers (1, 5, 10, 50, 100, 500, 1000)
+3: Adds symbols together
 ## Setup/Installation Requirements
 
 * _This is a great place_
