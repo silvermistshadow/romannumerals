@@ -13,6 +13,10 @@ Specs:
 1: value between 0 and 3,999
 2: translates whole roman numbers (1, 5, 10, 50, 100, 500, 1000)
 3: Adds symbols together
+4: Conforms to the following rules: (write and test each one by one)
+  0: Add value of all symbols
+  1: No more than three of the same character in a row
+  2: Separate ones, tens, hundreds and thousands
 ## Setup/Installation Requirements
 
 * _This is a great place_

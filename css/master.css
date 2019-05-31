@@ -18,8 +18,29 @@ body {
 
 #output {
   display: none;
-  text-shadow: none;
-  color: #FFF;
+  text-shadow:
+  -1px -1px 0 #DDD,
+  1px -1px 0 #DDD,
+  -1px 1px 0 #DDD,
+  1px 1px 0 #DDD;
+  color: #999;
+  font-size: 36px;
+  max-width: 400px;
+  border-width: 12px;
+  border-color: #333;
+  border-style: double;
+  background-color: #999;
+  padding: 12px;
+}
+
+#outputErr {
+  display: none;
+  color: #D00;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
   font-size: 36px;
   max-width: 400px;
   border-width: 12px;
