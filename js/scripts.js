@@ -11,23 +11,8 @@ var toRomanNum = function(inputNum){
     return false;
   }
   var digits = [];
-  for (var x=0; x < wholeRomanNums.length; x++){
-    if (inputNum == wholeRomanNums[x]) {
-       if (inputNum == 500) {
-         convRomanNum = 'D'
-         x = wholeRomanNums.length;
-         console.log(convRomanNum)
-       }
-       else if (inputNum == 5) {
-         convRomanNum = 'V'
-         x = wholeRomanNums.length;
-       }
-       else if (inputNum == 50) {
-         convRomanNum = 'L'
-         x = wholeRomanNums.length;
-       }
-    }
-    else if (inputNum < 4000) {
+  for (var x=0; x < wholeRomanNums.length; x++){ //I considered changing this, but since there's 7 elements in that array and only 4 digits are possible, it doesn't really matter
+    if (inputNum < 4000) { //we can't count higher than 3,999 without using some other stuff that won't be used in this program
       digits = String(+inputNum).split("");
       var convArray = [];
       console.log(digits.length);
@@ -67,7 +52,8 @@ var toRomanNum = function(inputNum){
       }
     }
     else {
-
+      return 'out of range'
+      x = wholeRomanNums.length;
     }
   };
   return convRomanNum;
@@ -79,11 +65,16 @@ var toRomanNum = function(inputNum){
 $(document).ready(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
+    $("#rangeErr").hide();
+    $("#outputErr").hide(); //make sure we hide these two when the user subits something new after an error
     var inputNum = parseInt($("input#input").val());
     var outputNum = toRomanNum(inputNum);
     if (outputNum != false) {
       $("#output").text(outputNum)
       $("#output").show();
+    }
+    else if (outputNum == 'out of range'){
+      $("#rangeErr").show();
     }
     else {
       $("#outputErr").show();
